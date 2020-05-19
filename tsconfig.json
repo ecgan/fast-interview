@@ -30,6 +30,7 @@
   "include": [
     "next-env.d.ts",
     "**/*.ts",
-    "**/*.tsx"
+    "**/*.tsx",
+    "components/Stores/StoresList/RequestStoreCard/RequestStoreModal/useQuery.js"
   ]
 }
