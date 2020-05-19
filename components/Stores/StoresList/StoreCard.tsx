@@ -1,9 +1,9 @@
 import { Card } from "antd"
 
 interface Store {
-  name: String
-  domain: String
-  logo: String
+  name: string
+  domain: string
+  logo: string
 }
 
 interface Props {
@@ -14,7 +14,15 @@ const StoreCard = (props: Props) => {
   const { store } = props
 
   return (
-    <Card>
+    <Card
+      cover={
+        <img
+          width={148}
+          height={148}
+          src={store.logo}
+        />
+      }
+    >
       {store.name}
     </Card>
   )

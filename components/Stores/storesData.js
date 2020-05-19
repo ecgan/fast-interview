@@ -2,17 +2,17 @@ const stores = [
   {
     name: 'Casper',
     domain: '',
-    logo: ''
+    logo: 'https://logo.clearbit.com/casper.com'
   },
   {
-    name: 'Harry\'s',
+    name: 'MadHappy',
     domain: '',
-    logo: ''
+    logo: 'https://logo.clearbit.com/madhappy.com'
   },
   {
     name: 'Allbirds',
     domain: '',
-    logo: ''
+    logo: 'https://logo.clearbit.com/allbirds.com'
   }
 ]
 
