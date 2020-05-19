@@ -15,10 +15,6 @@ const RequestStoreModal = (props: ModalProps) => {
     >
       <Form
         layout='vertical'
-        onValuesChange={(changedValues, allValues) => {
-          console.log('changedValues: ', changedValues)
-          console.log('allValues: ', allValues)
-        }}
       >
         <Form.Item
           name='storeName'
