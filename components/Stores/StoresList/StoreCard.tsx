@@ -10,17 +10,26 @@ const StoreCard = (props: Props) => {
 
   return (
     <Card
+      style={{ width: 160, margin: 'auto' }}
       size='small'
       cover={
-        <img
-          width={148}
-          height={148}
-          src={store.logo}
-        />
+        <div
+          style={{ padding: 16 }}
+        >
+          <img
+            width={128}
+            height={128}
+            src={store.logo}
+          />
+        </div >
       }
     >
-      {store.name}
-    </Card>
+      <div
+        style={{ textAlign: 'center' }}
+      >
+        {store.name}
+      </div>
+    </Card >
   )
 }
 
