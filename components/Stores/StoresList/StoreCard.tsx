@@ -1,10 +1,5 @@
 import { Card } from "antd"
-
-interface Store {
-  name: string
-  domain: string
-  logo: string
-}
+import { Store } from "types/Store";
 
 interface Props {
   store: Store
@@ -15,6 +10,7 @@ const StoreCard = (props: Props) => {
 
   return (
     <Card
+      size='small'
       cover={
         <img
           width={148}

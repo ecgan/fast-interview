@@ -1,11 +1,7 @@
 import { List } from "antd";
 import StoreCard from "./StoreCard";
-
-interface Store {
-  name: String
-  domain: String
-  logo: String
-}
+import RequestStoreCard from "./RequestStoreCard/RequestStoreCard";
+import { Store } from "types/Store";
 
 interface Props {
   stores: Store[]
@@ -14,6 +10,15 @@ interface Props {
 const StoresList = (props: Props) => {
   const { stores } = props
 
+  const storesWithRequest = [
+    {
+      name: 'Request a Store',
+      domain: '',
+      logo: ''
+    },
+    ...stores
+  ]
+
   return (
     <List
       grid={{
@@ -21,8 +26,18 @@ const StoresList = (props: Props) => {
         xs: 2,
         md: 3
       }}
-      dataSource={stores}
+      dataSource={storesWithRequest}
       renderItem={(store) => {
+        if (store.name === 'Request a Store') {
+          return (
+            <List.Item>
+              <RequestStoreCard
+                store={store}
+              />
+            </List.Item>
+          )
+        }
+
         return (
           <List.Item>
             <StoreCard
@@ -31,7 +46,8 @@ const StoresList = (props: Props) => {
           </List.Item>
         )
       }}
-    />
+    >
+    </List>
   )
 }
 
