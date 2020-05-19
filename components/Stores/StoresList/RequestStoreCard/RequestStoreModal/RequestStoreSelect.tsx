@@ -1,13 +1,15 @@
-import { Modal, Form, Select, Space, Empty } from "antd"
-import { ModalProps } from "antd/lib/modal"
-import axios from "axios";
-import { useState } from 'react'
+import { Empty, Select, Space } from "antd";
 import debounce from "lodash/debounce";
 import useQuery from "./useQuery";
 
-const RequestStoreSelect = (props) => {
+interface Props {
+  value?: string
+  onChange?: (value?: string) => {}
+}
+
+const RequestStoreSelect = (props: Props) => {
   const { value, onChange = () => { } } = props
-  const [fetch, clear, { loading, data }] = useQuery()
+  const [fetch, { loading, data }] = useQuery()
 
   const debouncedSearch = debounce(async (value: string) => {
     await fetch(value)
