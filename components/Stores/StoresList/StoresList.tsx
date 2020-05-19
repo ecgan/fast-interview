@@ -20,33 +20,37 @@ const StoresList = (props: Props) => {
   ]
 
   return (
-    <List
-      grid={{
-        gutter: 16,
-        xs: 2,
-        md: 3
-      }}
-      dataSource={storesWithRequest}
-      renderItem={(store) => {
-        if (store.name === 'Request a Store') {
+    <div
+      style={{ maxWidth: 512, margin: 'auto' }}
+    >
+      <List
+        grid={{
+          gutter: 16,
+          xs: 2,
+          md: 3
+        }}
+        dataSource={storesWithRequest}
+        renderItem={(store) => {
+          if (store.name === 'Request a Store') {
+            return (
+              <List.Item>
+                <RequestStoreCard
+                  store={store}
+                />
+              </List.Item>
+            )
+          }
+
           return (
             <List.Item>
-              <RequestStoreCard
+              <StoreCard
                 store={store}
               />
             </List.Item>
           )
-        }
-
-        return (
-          <List.Item>
-            <StoreCard
-              store={store}
-            />
-          </List.Item>
-        )
-      }}
-    />
+        }}
+      />
+    </div>
   )
 }
 

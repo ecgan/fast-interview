@@ -32,23 +32,32 @@ const RequestStoreCard = (props: Props) => {
         onCancel={handleCancel}
       />
       <Card
+        style={{ width: 160, margin: 'auto' }}
         size='small'
         cover={
-          <Row
-            justify='center'
-            align='middle'
-            style={{ width: 148, height: 148 }}
+          <div
+            style={{ padding: 16 }}
           >
-            <Col>
-              <PlusOutlined
-                style={{ fontSize: 64 }}
-              />
-            </Col>
-          </Row>
+            <Row
+              justify='center'
+              align='middle'
+              style={{ width: 128, height: 128 }}
+            >
+              <Col>
+                <PlusOutlined
+                  style={{ fontSize: 64 }}
+                />
+              </Col>
+            </Row>
+          </div>
         }
         onClick={handleClick}
       >
-        {store.name}
+        <div
+          style={{ textAlign: 'center' }}
+        >
+          {store.name}
+        </div>
       </Card>
     </div>
   )
