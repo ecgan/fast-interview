@@ -1,4 +1,5 @@
 import { PageHeader } from "antd";
+import Stores from "@/components/Stores/Stores";
 
 export default function Home() {
   return (
@@ -7,6 +8,7 @@ export default function Home() {
         title='Fast'
       >
       </PageHeader>
+      <Stores />
     </div>
   )
 }
