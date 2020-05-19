@@ -1,7 +1,7 @@
-import { List } from "antd";
-import StoreCard from "./StoreCard";
-import RequestStoreCard from "./RequestStoreCard/RequestStoreCard";
-import { Store } from "types/Store";
+import { List } from 'antd'
+import StoreCard from './StoreCard'
+import RequestStoreCard from './RequestStoreCard/RequestStoreCard'
+import { Store } from 'types/Store'
 
 interface Props {
   stores: Store[]
@@ -46,8 +46,7 @@ const StoresList = (props: Props) => {
           </List.Item>
         )
       }}
-    >
-    </List>
+    />
   )
 }
 

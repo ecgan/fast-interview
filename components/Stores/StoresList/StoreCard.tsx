@@ -1,5 +1,5 @@
-import { Card } from "antd"
-import { Store } from "types/Store";
+import { Card } from 'antd'
+import { Store } from 'types/Store'
 
 interface Props {
   store: Store

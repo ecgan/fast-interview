@@ -1,6 +1,6 @@
-import { Card, Row, Col } from "antd"
-import { Store } from "types/Store";
-import { PlusOutlined } from "@ant-design/icons";
+import { Card, Row, Col } from 'antd'
+import { Store } from 'types/Store'
+import { PlusOutlined } from '@ant-design/icons'
 
 interface Props {
   store: Store

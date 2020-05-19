@@ -6,7 +6,7 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint:fix": "standardx **/*.ts **/*.tsx --fix"
+    "lint:fix": "standardx './**/*.ts' './**/*.tsx' --fix"
   },
   "dependencies": {
     "@ant-design/icons": "^4.1.0",
